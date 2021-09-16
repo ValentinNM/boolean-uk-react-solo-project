@@ -1,0 +1,4 @@
+{
+  "/videos": "/videos?_expand=playlist",
+  "/videos/*": "/videos/$1?_expand=playlist"
+}

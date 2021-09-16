@@ -1,4 +1,131 @@
 .App {
   font-family: sans-serif;
+  /* font-family: 'Courier New', Courier, monospace; */
   text-align: center;
+}
+
+html { 
+  scroll-behavior: smooth;
+}
+
+* { 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.App { 
+  display: grid;
+  /* grid-template-rows: 255px 1fr; */
+}
+
+.app_main_container {
+  display: grid;
+  grid-template-columns: 255px 1fr;
+}
+
+.header { 
+  background-color: burlywood;
+  /* padding: 0; */
+}
+
+.aside_main_menu{
+  background-color: aquamarine;
+}
+
+
+/* Header*/
+
+.header_container { 
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.header_searchbar_form { 
+  display: flex;
+  /* align-content: center; */
+  justify-content: center;
+}
+
+.header_searchbar_form input{ 
+  width: 400px;
+}
+
+.expand_menu_logo img { 
+  max-height: 40px;
+  /* border: 0px; */
+}
+
+.expand_menu_logo {
+  border: 0px;
+  background: transparent;
+}
+
+.youTube_studio_logo { 
+  background: transparent;
+  max-height: 40px;
+}
+.youTube_studio_logo img { 
+  max-height: 40px;
+}
+
+.two_column_grid { 
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+
+
+/* Aside */
+.aside_avatar_section img { 
+  max-width: 100px;
+  border-radius: 50%;
+  /* width: fit-content;
+  block-size: fit-content; */
+}
+
+/* .cover {
+  object-fit: cover;
+} */
+
+/* Dasboard layout */
+
+/* .dashboard_main_container { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+} */
+
+.dashboard_header { 
+  height: 6ch;
+  background-color: antiquewhite;
+  border: 1px dotted black;
+  border-radius: 1px;
+}
+
+.three_column_grid { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  /* margin: 0 10px 0 10px; */
+
+}
+
+.dotted{ 
+  border: 1px dotted black;
+  border-radius: 1px;
+}
+
+.margin { 
+  margin: 10px;
+}
+
+
+/* Channel Content */
+
+.filter_section img {
+  max-height: 20px;
 }

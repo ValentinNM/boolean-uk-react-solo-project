@@ -1,0 +1,16 @@
+{
+    "videos": [
+      {
+        "id": 1,
+        "title": "Mike Tyson",
+        "description": "Lorem Ipsum",
+        "playlistId": 1
+      }
+    ],
+    "playlists": [
+      {
+        "id": 1,
+        "name": "Motivation"
+      }
+    ]
+  }
