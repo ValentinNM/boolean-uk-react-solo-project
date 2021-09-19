@@ -1,9 +1,8 @@
-import * as React from 'react';
-import React, { Component }  from 'react';
+import React from "react";
 import ReactDOM from "react-dom";
 import { StrictMode } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { ChannelContent, Dashboard, VideoUpload } from "./components";
+// import { ChannelContent, Dashboard, VideoUpload } from "./components";
 
 
 import App from "./App";

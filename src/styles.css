@@ -28,6 +28,10 @@ body {
   grid-template-columns: 255px 1fr;
 }
 
+.icon {
+  max-height: 30px;
+}
+
 .header { 
   background-color: burlywood;
   /* padding: 0; */
@@ -74,6 +78,10 @@ body {
 }
 
 .two_column_grid { 
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.two_column_grid__aside_menu { 
   display: grid;
   grid-template-columns: auto 1fr;
 }
@@ -128,4 +136,23 @@ body {
 
 .filter_section img {
   max-height: 20px;
+}
+
+
+
+.newbutton { 
+  color: red;
+}
+
+ /* Video Edit form */
+.edit-video-component__main-container { 
+  background-color: blanchedalmond;
+
+  /* grid-template-columns: 60px 1fr; */
+}
+
+.two-column-grid__header { 
+  display: flex;
+  grid-template-rows: 60px 1fr;
+
 }

@@ -11,4 +11,5 @@ AIzaSyDvGhmOx1sm166V-SgMJJObrOMBjaVDfQ8
 2.1 In the details section
 - Titlle should auto populate with file name
 - Desription text area
-- Thumbnail 
+- Thumbnail
+
