@@ -12,7 +12,7 @@ export default function Dashboard()  {
         <div className="three_column_grid">
         <div className="dotted">
             <h2>Latest YouTube Short Performance</h2>
-            <img src="" alt="last short video" />
+            <img className="video_thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv0aWbHmx85Ftynk6_QuwLxcZzZZVbtVtE2A&usqp=CAU" alt="last short video" />
         </div>
         <div className="dotted">
             <h2>Channel analytics</h2>

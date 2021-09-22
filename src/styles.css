@@ -156,3 +156,16 @@ body {
   grid-template-rows: 60px 1fr;
 
 }
+
+.multi_filtering_options { 
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.video_thumbnail { 
+  max-width: 200px;
+}
+
+.thumbnail-icon{ 
+  max-width: 120px;
+}

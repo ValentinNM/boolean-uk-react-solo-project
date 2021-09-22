@@ -1,6 +1,22 @@
-// import React from "react";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { isConstTypeReference } from 'typescript';
 
-export default function ChannelContent ()  { 
+export default function ChannelContent (props)  { 
+    const {videos, setVideos, setVideoToEdit} = props;
+    // console.log("props in ChannelContent:", videos)
+
+    // 
+    const handleDelete = (event, id) => {
+        console.log("id inside ChannelContent: ", id)
+    fetch(`http://localhost:3030/videos/${id}`, { method: 'DELETE' })
+    // setVideos(videos)
+    }
+
+    const handleVideoToEdit = (event, video) => {
+        console.log(" video inside handleVideoToEdit:", video)
+        setVideoToEdit(video)
+    }
 
     return (
         <div className="dotted content_container">
@@ -21,37 +37,64 @@ export default function ChannelContent ()  {
                 <option value="">To be edited</option>
             </select>
         </div>
-        
-        <div className="multi_filtering_options">
-            <input name="video" id="video" type="checked" />
+        <ul>
+        <li className="multi_filtering_options">
+            <input type="checkbox" />
+            <h5>Video</h5>
             <h5>Visibility</h5>
             <h5>Restricctions</h5>
             <h5>Date</h5>
             <h5>Views</h5>
             <h5>Comments</h5>
             <h5>Likes(vs. dislikes)</h5>
-        </div>
+        </li>
+        </ul>
         <div className="video_listing_area">
-            {/* map through db and have a video object rendered in li */}
             <ul>
-                <li>
+            { videos.map((video, index)=> { 
+
+                const {title,
+                    description,
+                    thumbnail,
+                    visibility,
+                    ageRestriction,
+                    date,
+                    views,
+                    comments,
+                    likevsdislike,
+                    madeForKids,
+                    id    
+                } = video
+                // console.log("mapping the video Id: ", id)
+                return(
+                    <li key={index} className="multi_filtering_options">
                     <input type="checkbox" />
-                    {/* status Publiuc/ draft */}
                     <div>
-                        <img src="" alt="icon" />
-                        <p>Public</p>
+                        <img className="thumbnail-icon" src={thumbnail} alt="icon" />
+                        <h4>{title}</h4>
+                        <p>{description}</p>
                     </div>
-                <div>Restrictions</div>
+                        <p>{visibility}</p>
+                <div>{ageRestriction}</div>
                 <div className="sort_by_date">
-                    <p>Data</p>
+                    <p>{date}</p>
                     <img src="" alt="up or down arrow" />
                 </div>
-                <div> Views </div>
-                <div> Comments </div>
-                <button className="edit_draft" >
-                Edit Draft
+                <div> {views} </div>
+                <div> {comments} </div>
+                <div>
+                <button className="edit_draft" onClick={(e)=>handleVideoToEdit(e,video)} >
+                    <Link to="/edit-video">Edit Draft</Link>
                 </button>
-                </li>
+                <button className="deleteButton" id={id}
+                onClick={(e)=>handleDelete(e, id)} >
+                    Delete
+                </button>
+                </div>
+                </li> 
+                )
+            })
+            }
             </ul>
         </div>
 

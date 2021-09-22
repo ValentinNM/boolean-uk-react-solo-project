@@ -37,7 +37,7 @@ export default function Header() {
                   }}
                  variant="contained" href="#contained-buttons">Link</Button>
                     <button>
-                        <Link to="/create-form">Create</Link>
+                        <Link to="/create-video">Create</Link>
                     </button>
                     <button>
                         User Avatar pic
