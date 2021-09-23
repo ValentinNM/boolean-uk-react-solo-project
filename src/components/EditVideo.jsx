@@ -63,7 +63,7 @@ export default function EditVideo (props)  {
       value={videoToUpdate.title}
       />
       <label htmlFor="description">Description</label>
-      <textarea name="description" id="description" cols="30" rows="10" placeholder="Tell viewers about your video"
+      <textarea name="description" value={videoToUpdate.description} id="description" cols="30" rows="10" placeholder="Tell viewers about your video"
       ></textarea>
       <div className="thumbnail_area">
           <strong>Thumbnail</strong>
@@ -158,7 +158,7 @@ export default function EditVideo (props)  {
           </div>
       </div>
       <div>
-          <button type="submit">Submit</button>
+          <button type="submit">Submit Changes</button>
       </div>
 
       </form>

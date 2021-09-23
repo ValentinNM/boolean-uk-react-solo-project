@@ -42,7 +42,7 @@ export default function ChannelContent (props)  {
             <input type="checkbox" />
             <h5>Video</h5>
             <h5>Visibility</h5>
-            <h5>Restricctions</h5>
+            <h5>Restrictions</h5>
             <h5>Date</h5>
             <h5>Views</h5>
             <h5>Comments</h5>

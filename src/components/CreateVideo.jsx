@@ -13,8 +13,8 @@ export default function CreateVideo (props) {
     const [views, setViews] = useState('')
     const [likevsdislike, setLikesvsdislikes] = useState('')
     const [date, setDate] = useState('')
-    const [madeForKids, setMadeForKids] = useState(false)
-    const [ageRestriction, setAgeRestriction] = useState(false)
+    const [madeForKids, setMadeForKids] = useState('')
+    const [ageRestriction, setAgeRestriction] = useState('')
     const [playlists, setPlaylists] = useState([]);
 
     useEffect(() => {
@@ -70,10 +70,20 @@ export default function CreateVideo (props) {
         console.log("description: ", event.target.value)
         setDescription(event.target.value)
     }
+
     const handleVisibility = (event) => {
-        console.log("visibility: ", event.target.checked)
-        setVisibility(event.target.checked)
+        console.log("visibility: ", event.target.value)
+        // const capitalised = capitalizeFirstLetter(event.target.value)
+        // console.log("capitalised: ",capitalised)
+        setVisibility(event.target.value)
     }
+
+    // will need the belwo function wwhen filtering by 
+    // visibility in content contnet component
+    // function capitalizeFirstLetter(string) {
+    //     return string.charAt(0).toUpperCase() + string.slice(1);
+    // }
+
     const handleThumbnail = (event) => {
         console.log("selected thumbnail: ", event.target.value)
         setThumbnail (event.target.value)
@@ -87,13 +97,13 @@ export default function CreateVideo (props) {
     console.log("playlisId:", playlistId)
 
     const handleMadeForKids = (event) => {
-        console.log("handleMadeForKids to select: ", event.target.checked)   
+        console.log("handleMadeForKids to select: ", event.target.value)   
         setMadeForKids(event.target.value)
     } 
     
     const handleAgeRestriction = (event) =>{
-        console.log("handleAgeRestriction to select: ", event.target.checked)   
-        setAgeRestriction(event.target.checked)
+        console.log("handleAgeRestriction to select: ", event.target.value)   
+        setAgeRestriction(event.target.value)
     }
 
     const handleDate = (event) => { 
@@ -153,10 +163,10 @@ export default function CreateVideo (props) {
             <p>Add your video to one or more playlists. Playlists can help viewers to discover your content faster. Learn more</p>
                 <select onChange={handlePlaylist} name="playlists-dropdown" id="">
                 <option value="">Please select...</option>
-                {playlists.map((playlist) => {
+                {playlists.map((playlist, index) => {
                     const  {id, name} = playlist
                     return(
-                        <option value={id}>{name}</option>
+                        <option key={index} value={id}>{name}</option>
                         )
                     })}
                     </select>
@@ -179,11 +189,11 @@ export default function CreateVideo (props) {
         </div>
         <div className="visibility-selection">
             <h4>Visibility: </h4>
-            <select name="dropdown" id="">
-                <option onSelect={handleVisibility} value="">Select</option>
-                <option onSelect={handleVisibility} value="public">Public</option>
-                <option onSelect={handleVisibility} value="unlisted">Unlisted</option>
-                <option onSelect={handleVisibility} value="hiden">Hiden</option>
+            <select onChange={handleVisibility} name="dropdown" id="">
+                <option value="">Select</option>
+                <option value="public">Public</option>
+                <option value="unlisted">Unlisted</option>
+                <option value="hiden">Hiden</option>
             </select>
         </div>
         <div>
@@ -194,7 +204,7 @@ export default function CreateVideo (props) {
             </blockquote>
             <div>
                 <label htmlFor="">
-                    <input on type="radio" name="kids-validation" id="1" value="yes" onChange={handleMadeForKids}/>
+                    <input type="radio" name="kids-validation" id="1" value="yes" onChange={handleMadeForKids}/>
                     <p>Yes, it's 'Made for Kids'</p>
                 </label>
                 <label htmlFor="">
@@ -211,11 +221,11 @@ export default function CreateVideo (props) {
             <p>Age-restricted videos are not shown in certain areas of YouTube. These videos may have limited or no ads monetisation. Learn more</p>
             <div>
                 <label htmlFor="">
-                    <input type="radio" name="legal-age" id="1" onChange={handleAgeRestriction} />
+                    <input type="radio" id="yes" name="legal-age" value="yes" onChange={handleAgeRestriction} />
                     <p>Yes, restrict my video to viewers over 18</p>
                 </label>
                 <label htmlFor="">
-                    <input type="radio" name="legal-age" id="2" onChange={handleAgeRestriction} />
+                    <input type="radio" id="no" name="legal-age" value="no" onChange={handleAgeRestriction} />
                     <p>No, don't restrict my video to viewers over 18 only</p>
                 </label>
             </div>
@@ -229,7 +239,7 @@ export default function CreateVideo (props) {
 
         <aside className="dotted editForm_aside_video_section">
             <div className="video_main_container">
-                <iframe className="dotted" src="" frameborder="0">
+                <iframe className="dotted" src="" frameBorder="0">
                 </iframe>
                 <h4>Videolink</h4>
                 <h4>Filename</h4>
