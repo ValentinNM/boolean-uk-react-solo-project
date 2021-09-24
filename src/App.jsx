@@ -16,6 +16,7 @@ import { backdropUnstyledClasses } from '@mui/core';
 export default function App() {
 const [videos, setVideos] = useState([])
 const [videoToEdit, setVideoToEdit] = useState(null)
+const [playlists, setPlaylists] = useState([]);
 
 // console.log("main State - videos :", videos, "\n", "videoToEdit in App.JSX: ", videoToEdit);
 
@@ -27,6 +28,14 @@ useEffect(() => {
     setVideos(data)
   })
 }, [])
+
+useEffect(() => {
+  fetch("http://localhost:3030/playlists")
+  .then((res) =>res.json())
+  .then(playlistsData => {
+      setPlaylists(playlistsData)         
+  })
+},[]) 
 
 
   return (
@@ -46,10 +55,10 @@ useEffect(() => {
         />
       </Route>
       <Route exact path="/edit-video">
-        <EditVideo videoToEdit={videoToEdit}/>
+        <EditVideo playlists={playlists} videos={videos} videoToEdit={videoToEdit}/>
       </Route>
       <Route exact path="/create-video">
-        <CreateVideo videos={videos} setVideos={setVideos} setVideoToEdit={setVideoToEdit}/>
+        <CreateVideo videos={videos} playlists={playlists} setVideos={setVideos} setVideoToEdit={setVideoToEdit}/>
       </Route>
       </Switch>
       

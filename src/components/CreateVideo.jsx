@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function CreateVideo (props) { 
-    const {videos, setVideos} = props;
+    const {videos,playlists, setVideos} = props;
 
     console.log("props in EditVideoForm: ", props)
     const [title, setTitle] = useState('');
@@ -15,13 +15,7 @@ export default function CreateVideo (props) {
     const [date, setDate] = useState('')
     const [madeForKids, setMadeForKids] = useState('')
     const [ageRestriction, setAgeRestriction] = useState('')
-    const [playlists, setPlaylists] = useState([]);
-
-    useEffect(() => {
-        fetch("http://localhost:3030/playlists")
-        .then((res) =>res.json())
-        .then(playlistsData => setPlaylists(playlistsData))
-    },[]) 
+    // const [playlists, setPlaylists] = useState(playlists);
 
     const handleSubmit = (event) => { 
         event.preventDefault();
@@ -233,7 +227,6 @@ export default function CreateVideo (props) {
         <div>
             <button type="submit">Submit</button>
         </div>
-
         </form>
         </section>
 
