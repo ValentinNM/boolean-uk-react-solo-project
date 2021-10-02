@@ -44,11 +44,12 @@ useEffect(() => {
     <div className="app_main_container">
     <AsideMenu />
     <Switch>
-      <Route exact path="/">
+      <Route exact path="/dashboard">
       < Dashboard /> 
       </Route>
       <Route exact path="/channel-content">
         <ChannelContent
+        playlists={playlists}
         setVideoToEdit={setVideoToEdit}
         videos={videos}
         setVideos={setVideos}

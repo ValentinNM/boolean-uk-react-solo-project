@@ -5,12 +5,12 @@ import { Link } from "react-router-dom"
 export default function AsideMenu () {
 
     return(
-        <aside className="aside_main_menu">
-            <div className=" dotted aside_avatar_section">
+        <aside className=" padding_10 aside_main_menu">
+            <div className="aside_avatar_section">
                 <div className="cover">
                 <img src="https://www.kindpng.com/picc/m/472-4721746_dwayne-johnson-fanny-pack-meme-download-dwayne-johnson.png" alt="" />                </div>
                 <h3>Your channel</h3>
-                <p>User Name</p>
+                <p>@ da 🗿</p>
             </div>
             <section className="aside_menu_selection">
                 <div className="menu-selection__two_column_grid">
@@ -19,7 +19,7 @@ export default function AsideMenu () {
                             <img className="icon" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0xOTcuMzMyMDMxIDE3MC42Njc5NjloLTE2MGMtMjAuNTg1OTM3IDAtMzcuMzMyMDMxLTE2Ljc0NjA5NC0zNy4zMzIwMzEtMzcuMzM1OTM4di05NmMwLTIwLjU4NTkzNyAxNi43NDYwOTQtMzcuMzMyMDMxIDM3LjMzMjAzMS0zNy4zMzIwMzFoMTYwYzIwLjU4OTg0NCAwIDM3LjMzNTkzOCAxNi43NDYwOTQgMzcuMzM1OTM4IDM3LjMzMjAzMXY5NmMwIDIwLjU4OTg0NC0xNi43NDYwOTQgMzcuMzM1OTM4LTM3LjMzNTkzOCAzNy4zMzU5Mzh6bS0xNjAtMTM4LjY2Nzk2OWMtMi45NDE0MDYgMC01LjMzMjAzMSAyLjM5MDYyNS01LjMzMjAzMSA1LjMzMjAzMXY5NmMwIDIuOTQ1MzEzIDIuMzkwNjI1IDUuMzM1OTM4IDUuMzMyMDMxIDUuMzM1OTM4aDE2MGMyLjk0NTMxMyAwIDUuMzM1OTM4LTIuMzkwNjI1IDUuMzM1OTM4LTUuMzM1OTM4di05NmMwLTIuOTQxNDA2LTIuMzkwNjI1LTUuMzMyMDMxLTUuMzM1OTM4LTUuMzMyMDMxem0wIDAiLz48cGF0aCBkPSJtMTk3LjMzMjAzMSA1MTJoLTE2MGMtMjAuNTg1OTM3IDAtMzcuMzMyMDMxLTE2Ljc0NjA5NC0zNy4zMzIwMzEtMzcuMzMyMDMxdi0yMjRjMC0yMC41ODk4NDQgMTYuNzQ2MDk0LTM3LjMzNTkzOCAzNy4zMzIwMzEtMzcuMzM1OTM4aDE2MGMyMC41ODk4NDQgMCAzNy4zMzU5MzggMTYuNzQ2MDk0IDM3LjMzNTkzOCAzNy4zMzU5Mzh2MjI0YzAgMjAuNTg1OTM3LTE2Ljc0NjA5NCAzNy4zMzIwMzEtMzcuMzM1OTM4IDM3LjMzMjAzMXptLTE2MC0yNjYuNjY3OTY5Yy0yLjk0MTQwNiAwLTUuMzMyMDMxIDIuMzkwNjI1LTUuMzMyMDMxIDUuMzM1OTM4djIyNGMwIDIuOTQxNDA2IDIuMzkwNjI1IDUuMzMyMDMxIDUuMzMyMDMxIDUuMzMyMDMxaDE2MGMyLjk0NTMxMyAwIDUuMzM1OTM4LTIuMzkwNjI1IDUuMzM1OTM4LTUuMzMyMDMxdi0yMjRjMC0yLjk0NTMxMy0yLjM5MDYyNS01LjMzNTkzOC01LjMzNTkzOC01LjMzNTkzOHptMCAwIi8+PHBhdGggZD0ibTQ3NC42Njc5NjkgNTEyaC0xNjBjLTIwLjU4OTg0NCAwLTM3LjMzNTkzOC0xNi43NDYwOTQtMzcuMzM1OTM4LTM3LjMzMjAzMXYtOTZjMC0yMC41ODk4NDQgMTYuNzQ2MDk0LTM3LjMzNTkzOCAzNy4zMzU5MzgtMzcuMzM1OTM4aDE2MGMyMC41ODU5MzcgMCAzNy4zMzIwMzEgMTYuNzQ2MDk0IDM3LjMzMjAzMSAzNy4zMzU5Mzh2OTZjMCAyMC41ODU5MzctMTYuNzQ2MDk0IDM3LjMzMjAzMS0zNy4zMzIwMzEgMzcuMzMyMDMxem0tMTYwLTEzOC42Njc5NjljLTIuOTQ1MzEzIDAtNS4zMzU5MzggMi4zOTA2MjUtNS4zMzU5MzggNS4zMzU5Mzh2OTZjMCAyLjk0MTQwNiAyLjM5MDYyNSA1LjMzMjAzMSA1LjMzNTkzOCA1LjMzMjAzMWgxNjBjMi45NDE0MDYgMCA1LjMzMjAzMS0yLjM5MDYyNSA1LjMzMjAzMS01LjMzMjAzMXYtOTZjMC0yLjk0NTMxMy0yLjM5MDYyNS01LjMzNTkzOC01LjMzMjAzMS01LjMzNTkzOHptMCAwIi8+PHBhdGggZD0ibTQ3NC42Njc5NjkgMjk4LjY2Nzk2OWgtMTYwYy0yMC41ODk4NDQgMC0zNy4zMzU5MzgtMTYuNzQ2MDk0LTM3LjMzNTkzOC0zNy4zMzU5Mzh2LTIyNGMwLTIwLjU4NTkzNyAxNi43NDYwOTQtMzcuMzMyMDMxIDM3LjMzNTkzOC0zNy4zMzIwMzFoMTYwYzIwLjU4NTkzNyAwIDM3LjMzMjAzMSAxNi43NDYwOTQgMzcuMzMyMDMxIDM3LjMzMjAzMXYyMjRjMCAyMC41ODk4NDQtMTYuNzQ2MDk0IDM3LjMzNTkzOC0zNy4zMzIwMzEgMzcuMzM1OTM4em0tMTYwLTI2Ni42Njc5NjljLTIuOTQ1MzEzIDAtNS4zMzU5MzggMi4zOTA2MjUtNS4zMzU5MzggNS4zMzIwMzF2MjI0YzAgMi45NDUzMTMgMi4zOTA2MjUgNS4zMzU5MzggNS4zMzU5MzggNS4zMzU5MzhoMTYwYzIuOTQxNDA2IDAgNS4zMzIwMzEtMi4zOTA2MjUgNS4zMzIwMzEtNS4zMzU5Mzh2LTIyNGMwLTIuOTQxNDA2LTIuMzkwNjI1LTUuMzMyMDMxLTUuMzMyMDMxLTUuMzMyMDMxem0wIDAiLz48L3N2Zz4=" />
                         </li>
                         <li>
-                        <Link to="/">Dashboard </Link>
+                        <Link to="/dashboard">Dashboard </Link>
                         </li>
                     </ul>
                 </div>

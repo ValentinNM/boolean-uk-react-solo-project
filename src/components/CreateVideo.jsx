@@ -108,16 +108,11 @@ export default function CreateVideo (props) {
     return(
         <div className="edit-video-component__main-container" >
             
-        <header className="dotted">
-            <h3>Video name {} </h3>
-            <div>Saved as draft</div>
-            <button>Leave feedback</button>
-            <button>X</button> // closing button
-
-        {/* Progrss bar */}
-        <div className="progress-bar">
-            Inside progress bar element
-        </div>
+        <header className="create_header">
+            <h3>Here was supposed to be something </h3>
+            <div></div>
+            <button>Please don't leave feedback</button>
+            <button className="deleteButton"> X </button>
         </header>
         <div className="two-column-grid__header">
 
@@ -230,12 +225,13 @@ export default function CreateVideo (props) {
         </form>
         </section>
 
-        <aside className="dotted editForm_aside_video_section">
+        <aside className=" editForm_aside_video_section">
             <div className="video_main_container">
                 <iframe className="dotted" src="" frameBorder="0">
                 </iframe>
-                <h4>Videolink</h4>
-                <h4>Filename</h4>
+                <h4> 🔝 here was supposed to be a video 🔝 </h4>
+                <h4>here was supposed to be a file link</h4>
+                <h4>here was supposed to be a file name</h4>
             </div>
         </aside>
             </div>        
